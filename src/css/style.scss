@@ -1,0 +1,282 @@
+$bgcolor: lightblue;
+$textcolor: grey;
+$fontsize: 14px;
+$navbarColor: grey;
+$lightgrey: #d3d3d3;
+
+/* Use the variables */
+
+body {
+  color: $textcolor;
+  font-size: $fontsize;
+  // font-size: $fontsize;
+  h2 {
+    font-size: 30px;
+  }
+}
+.Container {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+}
+
+.Container-2 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.Container-4 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.Container-3 {
+  margin: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+.box-lg {
+  border: 1px solid #d3d3d3;
+
+  padding: 10px;
+  border-radius: 5px;
+
+  color: black !important;
+  -webkit-transition: height 0.5s ease;
+  -moz-transition: height 0.5s ease;
+  -ms-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+} /*Init*/
+.accordeon-checkbox {
+  display: none;
+}
+.accordeon-title-label {
+  cursor: pointer;
+  display: block;
+  margin-right: 0;
+}
+
+.select-style {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fafafa;
+  padding: 5px;
+}
+.input-style {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 24%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.input-style input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+
+.select-style select {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+
+.accordeon-content {
+  height: auto;
+  overflow: hidden;
+  background-color: white;
+
+  -webkit-transition: height 0.5s ease;
+  -moz-transition: height 0.5s ease;
+  -ms-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+.filter {
+  background-color: $lightgrey;
+  flex: 1;
+  border-radius: 10px;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  margin-left: 4px;
+}
+/*Click functionaliteit*/
+.accordeon:checked + label {
+  background: #e4e4e4;
+}
+
+.accordeon-checkbox:checked ~ .accordeon-content {
+  height: 150px;
+
+  @media only screen and (max-width: 700px) {
+    height: 600px;
+  }
+  .box-lg {
+    height: auto;
+  }
+}
+
+.btn-process {
+  color: white;
+  width: 100px;
+  background-color: #3597ff;
+  border-radius: 1px;
+  padding: 10px;
+  border: 0px;
+}
+.btn-process:hover {
+  background-color: rgb(47, 130, 218);
+  color: white;
+}
+.btn-process:active {
+  background-color: rgb(32, 89, 150);
+}
+
+.btn-cancel {
+  color: black;
+  width: 100px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+.btn-cancel:hover {
+  background-color: grey;
+  color: white;
+}
+.btn-cancel:active {
+  background-color: rgb(41, 41, 41);
+}
+
+.Navbar {
+  width: 100%;
+  border-bottom: 1px solid $lightgrey;
+  b {
+    font-size: 20px;
+    color: black;
+  }
+  .container {
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    .iconRight {
+      flex: 1;
+      color: red;
+    }
+
+    .iconLeft {
+      flex: 4;
+      color: red;
+    }
+  }
+}
